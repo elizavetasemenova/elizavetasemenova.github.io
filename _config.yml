@@ -1,2 +1,3 @@
 name: Liza Semenova, statistician in progress
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
