@@ -1,3 +1,6 @@
 name: Liza Semenova, statistician in progress
+highlighter: rouge
 markdown: kramdown
+kramdown:
+  input: GFM
 permalink: /blog/:year/:month/:day/:title
