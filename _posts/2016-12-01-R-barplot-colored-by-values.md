@@ -5,7 +5,8 @@ date: 2016-12-01
 comments: true
 ---
 
-Barplot in R colored by values:
+Barplot in R colored by values: by varying intensity of a color, highlight bars with larger values with more intense colors.
+Would be too boring not to animate.
 ```R
 for (t in 1:5){  
   n <- 100  
