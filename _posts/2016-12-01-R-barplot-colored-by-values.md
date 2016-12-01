@@ -9,7 +9,7 @@ Barplot in R colored by values: by varying intensity of a color, highlight bars 
 Would be too boring not to animate.
 {% gist 6f0c98313fe78079f272bc03e0fe3d73 %}  
 
-```ruby
+```R
 for (t in 1:5){  
   n <- 100  
   y <- sample(1:5, n, replace = T)  
