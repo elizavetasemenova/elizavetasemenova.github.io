@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Barplot colored by vlaues, R code snippet."
+title: "Barplot colored by values, an R code snippet."
 date: 2016-12-01
 comments: true
 ---
@@ -23,5 +23,6 @@ for (t in 1:5){ 
                 beside = T,          
                 yaxt='n')    
    text(pl, min(y)/2, y,cex=1.2, pos=3, col='mistyrose4')  
-   Sys.sleep(1)}
+   Sys.sleep(1)
+   }
 ```
