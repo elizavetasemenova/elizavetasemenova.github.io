@@ -50,3 +50,8 @@ ul.posts li {
 }
 /* Contact */
 .contact ul.list-unstyled li { line-height: 30px; text-indent: -30px; margin-left: 30px;}
+
+span.reverse {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
