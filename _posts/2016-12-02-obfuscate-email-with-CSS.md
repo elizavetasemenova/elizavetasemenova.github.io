@@ -15,9 +15,10 @@ span.reverse {
 }
 ```
 
-Now apply it to any text on your page to make it written
+Now apply it to any text on your page to make it written right to
 
 ```javascript
- <span class="reverse">tfel ot thgir.</span>
+ <span class="reverse">left.</span>
 ```
-Happy obfuscating!
+
+This will not work unfortunately work for right to left scrips such as hebrew. Otherwise happy obfuscating!
