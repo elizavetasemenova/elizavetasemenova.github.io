@@ -16,7 +16,7 @@ span.reverse {
 }
 ```
 
-<pre class="prettyprint">
+<pre class="prettyprint lang-cs">
 span.reverse {
   unicode-bidi: bidi-override;
   direction: rtl;
