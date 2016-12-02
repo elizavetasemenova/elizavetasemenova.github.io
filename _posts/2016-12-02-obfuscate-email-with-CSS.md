@@ -6,7 +6,7 @@ comments: true
 ---
 While creating this site, I wanted to add my e-mail explicitly to the list of contacts but not become a spam bot victim. Search results 
 offered such solutions as HTML-encoding or JavaScript obfuscation. I opted for the CSS workaround since found it the most elegant: 
-it changes text direction right to left. The trick works with the following code in the CSS file
+it changes text direction right to left. The trick works with the following code:
 
 ```CSS
 span.reverse {
@@ -15,7 +15,7 @@ span.reverse {
 }
 ```
 
-and apply to any text on your page to make it written
+Now apply it to any text on your page to make it written
 
 ```javascript
  <span class="reverse">tfel ot thgir.</span>
