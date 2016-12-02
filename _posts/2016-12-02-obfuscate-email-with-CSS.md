@@ -16,7 +16,9 @@ span.reverse {
 }
 ```
 
-and apply to any text text on your page
-```HTML
- <span class="reverse">thgir ot tfel</span>
+and apply to any text on your page to make it written
+
+```javascript
+ <span class="reverse">tfel ot thgir.</span>
 ```
+Happy obfuscating!
