@@ -38,7 +38,7 @@ Now ammend the STAN model with the random error term and its hyperparameters whi
 The new model
 <script src="https://gist.github.com/elizavetasemenova/dde3db3455d426a72798bcc4f273fe2e.js"></script>
 
-work with the R-call
+works with the R-call
 <script src="https://gist.github.com/elizavetasemenova/941f8745185ae65adce9d6325a4c718b.js"></script>
 
 and the estimates are as desired:
