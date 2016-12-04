@@ -21,5 +21,12 @@ Not surprisingly the mean and the estimates have changed. Could we have predicte
 
 $E[\lambda]=exp(\beta_0+\beta_1*x)*E[r]=exp(\beta_0+\beta_1*x)*exp(\mu_r+(\sigma_r)^2/2)$
 
-and so the inference routine, formulated incorrectly for the model without noise, interpretes the sum $\beta_0+\mu_r+(\sigma_r)^2/2$ as $\beta_0.$ 
+and so the inference routine, formulated incorrectly for the model without noise, interpretes the sum $\beta_0+\mu_r+(\sigma_r)^2/2$ as $\beta_0$.
 
+To get fluent in probabilistics language <a href="http://mc-stan.org">STAN</a> and verify that Bayesian inference will give the same results as the frequentist, let us translate the above said into the corresponding STAN-model to run it for both non-noisy and noisy data.
+
+Formulate the model
+<script src="https://gist.github.com/elizavetasemenova/00116cd5788fbc910f071712f7ddeb9c.js"></script>
+
+and call it via R-interface:
+<script src="https://gist.github.com/elizavetasemenova/94a44f1363199577f8d9c5ea13744957.js"></script>
