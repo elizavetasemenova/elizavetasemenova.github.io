@@ -6,7 +6,7 @@ comments: true
 ---
 
 Cox point process is another name for the Poisson process with random intensity. Let us consider an introductory example: 
-for a specified number of observations and regression coefficients generate a covariate and corresponding response,
+for specified number of observations and regression coefficients generate a covariate and corresponding response,
 compute the mean and estimate the parameters.
 
 <script src="https://gist.github.com/elizavetasemenova/af7c2e8cd908f725076856e16be4d1f8.js"></script>
@@ -31,4 +31,14 @@ Formulate the model
 and call it via R-interface:
 <script src="https://gist.github.com/elizavetasemenova/94a44f1363199577f8d9c5ea13744957.js"></script>
 
-The outcome is expected, which confirms that our model has been formulated correctly and we can build on it to fix the flaw.
+The outcome is as expected, which confirms that our model has been formulated correctly and we can build on it to fix the flaw.
+
+Now ammend the STAN model with the random error term and its hyperparameters which we aim to infer along with the regression coefficients. Note that we are running into non-identifieability problem since $\beta_0$ and $\mu_r$ are participating in the term $\beta_0+\mu_r$ on euqal rights. However high we set the number of iterations for the Markov Chain Monte Carlo, the algorithm may keep wondering forever how to better split the sum. As a remedy, we accept, that the actual intercept is $\beta_0+\mu_r$ and the error has zero mean.
+
+The new model:
+<script src="https://gist.github.com/elizavetasemenova/dde3db3455d426a72798bcc4f273fe2e.js"></script>
+
+the R-call:
+<script src="https://gist.github.com/elizavetasemenova/941f8745185ae65adce9d6325a4c718b.js"></script>
+
+
