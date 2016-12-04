@@ -17,7 +17,7 @@ Now spice up the intensity of the Poisson process, $\lambda$ with a random norma
 
 <script src="https://gist.github.com/elizavetasemenova/c9ee7d911da7cc25faac21cef9bfb1da.js"></script>
 
-Not surprisingly the mean and the estimates have changed. Could we have predicted their values prior to running the numerical experiment? Yes, and that is how. We are having in front of us a doubly stochastic process. Let us compute the expectation of the intensity:
+Not surprisingly the mean and the estimates have changed. Could we have predicted their values prior to running the numerical experiment? Yes, and that is how. We are having in front of us a  **doubly stochastic process **. Let us compute the expectation of the intensity:
 
 $E[\lambda]=exp(\beta_0+\beta_1*x)*E[r]=exp(\beta_0+\beta_1*x)*exp(\mu_r+(\sigma_r)^2/2)$
 
