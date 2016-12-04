@@ -44,3 +44,4 @@ work with the R-call
 and the estimates are as desired:
 <script src="https://gist.github.com/elizavetasemenova/99889dc391cf8917ecbc0791a2a823d8.js"></script>
 
+When log-intensity of the Cox process is a Gaussian Random Field, the process is called Log-Gaussian Cox Process (LGCP). The example above is a trivial version of it, when all error terms are independent (hence, the covariance matrix is diagonal). In more general cases any finite realization of the GP would have multivariate normal distribution with covariance of more complex structure.
