@@ -30,3 +30,5 @@ Formulate the model
 
 and call it via R-interface:
 <script src="https://gist.github.com/elizavetasemenova/94a44f1363199577f8d9c5ea13744957.js"></script>
+
+The outcome is expected, which confirms that our model has been formulated correctly and we can build on it to fix the flaw.
