@@ -35,10 +35,12 @@ The outcome is as expected, which confirms that our model has been formulated co
 
 Now ammend the STAN model with the random error term and its hyperparameters which we aim to infer along with the regression coefficients. Note that we are running into non-identifieability problem since $\beta_0$ and $\mu_r$ are participating in the term $\beta_0+\mu_r$ on euqal rights. However high we set the number of iterations for the Markov Chain Monte Carlo, the algorithm may keep wondering forever how to better split the sum. As a remedy, we accept, that the actual intercept is $\beta_0+\mu_r$ and the error has zero mean.
 
-The new model:
+The new model
 <script src="https://gist.github.com/elizavetasemenova/dde3db3455d426a72798bcc4f273fe2e.js"></script>
 
-the R-call:
+work with the R-call
 <script src="https://gist.github.com/elizavetasemenova/941f8745185ae65adce9d6325a4c718b.js"></script>
 
+and the estimates are as desired:
+<script src="https://gist.github.com/elizavetasemenova/99889dc391cf8917ecbc0791a2a823d8.js"></script>
 
