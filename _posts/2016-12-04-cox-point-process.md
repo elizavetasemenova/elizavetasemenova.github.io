@@ -5,7 +5,7 @@ date: 2016-12-04
 comments: true
 ---
 
-Cox point process is another name for the Poisson process with random intensity. Let us consider an example: 
+Cox point process is another name for the Poisson process with random intensity. Let us consider an introductory example: 
 for a specified number of observations and regression coefficients, generate a covariate and corresponding response. 
 Compute the mean.
 
