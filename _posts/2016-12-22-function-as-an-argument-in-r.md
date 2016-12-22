@@ -1,9 +1,13 @@
 ---
 layout: post
-title: "Function as an argument in R."
+title: "Function as an argument in R and an mapply example."
 date: 2016-12-22
 comments: true
 ---
+
+R allows functions to be arguments of other functions. To call an inside function as an argument of an outside function the following syntax can be used:
+
+outside_function <- function(non_func_qrgiments, FUN= inside_function){...}
 
 The snippet below makes use of the mapply R-function. It becomes helpful when one wants to apply a function f(x,y) to different sets of arguments (x1,y1), (x2,y2). The arguments can be functions themselves. In this case after the name of the external function 'f' we will pass into mapply a vector with all values for the first argument x=c(x1,x2,...), then for the second y=c(y1,y2,..) and so on:
 
