@@ -5,7 +5,7 @@ date: 2016-12-22
 comments: true
 ---
 
-The snippet below makes use of the mapply R-function. It becomes helpful when one wants to apply a function f(x,y) to different sets of arguments (x1,y1), (x2,y2). The arguments can be functions themselves. In this case after the name of the external function 'f' we will pass into mapply a vector with all values for the first argument of f x=c(x1,x2,...), then for the second y=c(y1,y2,..) and so on:
+The snippet below makes use of the mapply R-function. It becomes helpful when one wants to apply a function f(x,y) to different sets of arguments (x1,y1), (x2,y2). The arguments can be functions themselves. In this case after the name of the external function 'f' we will pass into mapply a vector with all values for the first argument x=c(x1,x2,...), then for the second y=c(y1,y2,..) and so on:
 
 mapply(f(x,y,z),
        c(x1,x2,...),
