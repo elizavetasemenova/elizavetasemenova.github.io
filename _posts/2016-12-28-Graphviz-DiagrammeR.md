@@ -5,9 +5,7 @@ date: 2016-12-28
 comments: true
 ---
 
-<a href="http://www.graphviz.org/Home.php">Graphviz</a> is an open source software for graph visualization. It may be useful to display 
-any object with connections, be they phisical or logical, such as networks and flowcharts. For this graphs should be described in 
-the DOT-language.
+DOT is not only a punctuation mark, it is also a graph description language used by <a href="http://www.graphviz.org/Home.php">Graphviz</a> - an open source software for graph visualization. Graphviz is very helpful when one needs to display any object with connections, be they phisical or logical, such as networks and flowcharts.
 
 Since I am currently going through simulation algorithms, it is really handy to have that diagram displaying relationships between 
 various probability distributions in front of me. Here I can mark quickly which algorithms I have already implemented and which not. The
