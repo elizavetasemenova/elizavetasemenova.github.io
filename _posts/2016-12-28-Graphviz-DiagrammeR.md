@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Graphviz functionality for R through DiagrammeR."
+title: "Graphviz functionality through DiagrammeR."
 date: 2016-12-28
 comments: true
 ---
