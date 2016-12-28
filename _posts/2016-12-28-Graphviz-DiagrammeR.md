@@ -13,4 +13,6 @@ Since I am currently going through simulation algorithms, it is really handy to 
 various probability distributions in front of me. Here I can mark quickly which algorithms I have already implemented and which not. The
 diagram was created with the <a href="http://rich-iannone.github.io/DiagrammeR/">DiagrammeR</a> package with the code presented below.
 
+![](https://github.com/elizavetasemenova/Blog/blob/master/2016_12_28/graph.png)
+
 <script src="https://gist.github.com/elizavetasemenova/22237673e871e76c009ae459be02df4f.js"></script>
