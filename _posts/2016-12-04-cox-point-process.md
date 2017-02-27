@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cox point process (Poisson process with random intensity) in R and STAN."
+title: "Cox point process (Poisson process with random intensity) in R and Stan."
 date: 2016-12-04
 comments: true
 ---
