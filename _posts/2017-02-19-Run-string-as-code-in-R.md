@@ -20,6 +20,4 @@ The answer for R is in the following snippet:
 Since we want to become bilingual, here is the Python version:
 <script src="https://gist.github.com/elizavetasemenova/899c546454937dd02ae344d275179556.js"></script>
 
-I am planning to upload the translations into the following tri-lingual repository on GitHub, once they are ready:
-
-https://github.com/elizavetasemenova/NatureInCode_Remake
+I am planning to upload the translation, once they are ready, into the <a href="https://github.com/elizavetasemenova/NatureInCode_Remake">tri-lingual repository on GitHub</a>.
