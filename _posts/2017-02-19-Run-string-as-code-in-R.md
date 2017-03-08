@@ -9,7 +9,7 @@ A while ago I read a book by Marcel Salathe 'Nature in Code', which was written 
 
 The code for the book was originally written in Java Script. This language was chosen since it runs on modern devices without additional installations, plus it is the language of the web. Anyhow, nowadays most of the Life Science analysis and modeling is done in R and/or Python (at least my biased perception says so). 
 
-Since I am going to re-read the book, I decided in parallel to be translating it into R and Python. And here I started phantasizing of creating an amendement to the course where students would have to complete tasks of two levels 1). manually translate codes in-between languages 2). write a macro, translating some basic constructions of one language into another: a string in language 1 as input and a string in lnaguage 2 as output.
+Since I am going to re-read the book, I decided in parallel to be translating it into R and Python. And here I started phantasizing of creating an amendement to the course where students would have to complete tasks of two levels 1). manually translate codes in-between languages 2). write a macro, translating some basic constructions of one language into another: a string in language1 as input and a string in language2 as output.
 
 If one had an R- or Python-code stored in a string and had to execute it, how could this be done?
 The answer for R is in the following snippet:  
