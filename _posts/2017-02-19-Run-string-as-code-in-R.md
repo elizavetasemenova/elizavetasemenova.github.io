@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nature in Code Remake: run string as code in R and Python.
+title: Run string as code in R and Python.
 date: 2017-02-19
 comments: true
 ---
