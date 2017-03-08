@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Barplot colored by values, an R code snippet."
+title: "Barplot, automatically colored by values: an R code snippet."
 date: 2016-12-01
 comments: true
 ---
