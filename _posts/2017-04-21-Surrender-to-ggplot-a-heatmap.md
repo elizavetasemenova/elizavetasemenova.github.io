@@ -1,6 +1,6 @@
 ---
 layout: post
-title: new post.
+title: Surrender to ggplot - a heatmap.
 date: 2017-04-21
 comments: true
 ---
