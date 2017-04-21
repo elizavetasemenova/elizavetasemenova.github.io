@@ -9,9 +9,7 @@ This world would be a better place if we invested more in developing cleaner sof
 
 Now, beyond lyrics: I have put together a wrapper-script for myself, which creates an R-package from the raw source code in one line. As proof of concept, I used the code to create a package out of itself. It is called 'packageR' and you can also  install it from my GitHub repository:
 
-devtools::install_github("elizavetasemenova/packageR")
-library(packageR)
-?create_package
+<script src="https://gist.github.com/elizavetasemenova/eb330be06bb6df9fe83cbe456ca8df22.js"></script>
 
-Now the help page should be displaying information about the create_package function and you are set for happy packaging! 
+Now the help page should be displaying information about the <i>create_package</i> function and you are set for happy packaging! 
 
