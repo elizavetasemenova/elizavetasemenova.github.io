@@ -11,5 +11,5 @@ Now, beyond lyrics: I have put together a wrapper-script for myself, which creat
 
 <script src="https://gist.github.com/elizavetasemenova/eb330be06bb6df9fe83cbe456ca8df22.js"></script>
 
-Now the help page should be displaying information about the <i>create_package</i> function and you are set for happy packaging! 
+The help page should be displaying information about the <i>create_package</i> function. Use <i>?update_package</i> during the development process when you want a change to become effctive. Now all is set for happy packaging! 
 
