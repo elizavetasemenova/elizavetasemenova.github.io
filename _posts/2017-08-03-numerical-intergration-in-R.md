@@ -20,4 +20,4 @@ To check, if the magnitude is correct, let us create a custom integration routin
 What remains to be done before we can report the answer, is the estimation of the portions of the integral which were discarded: the one 
 from x=0 to 1e-15 and the other one from x=100 to Infinity. Those values are negligable since, in the first case, a function, tending to zero, is being integrated over a very small interval, and in the second case the function decays very fast due to the presence of the exponent.
 
-An improvement can be achieved by selecting a non-equally spaced partitioning, which would take into account the growth speed of a function. In this case, to capture particular regions, one may chose more sparce and more dence partitioning in the regions of slow and fast growth, respectively.
+An improvement can be achieved by selecting a non-equally spaced partitioning, which would take into account the growth speed of a function. In this case, to capture particular regions, one may chose more sparce and more dense partitioning in the regions of slow and fast growth, respectively.
