@@ -13,17 +13,17 @@ To begin with, we need to create the C++ code itself (see below). After navigati
 
 <b>g++ -Wall first_compile.cc -o first_compile</b>
 
-where 'first_compile.cc' and 'first_compile' are the names of the input and output files, respectively. Now run the program with
+where <em>'first_compile.cc'</em> and <em>'first_compile'</em> are the names of the input and output files, respectively. Now run the program with
 
 <b>./first_compile</b>
 
-Alternatively, we can create a shell script called 'first_compile.sh' and list both compillation and execution the commands in it (see below). Then it suffies to run
+Alternatively, we can create a shell script called <em>'first_compile.sh'</em> and list both the compillation and execution commands in it (see below). Then it suffies to type
 
 <b>sh first_compile.sh</b>
 
 in your command line.
 
-Here are the code that gets you started and the corresponding shell script:
+Here are the code, that gets you started, and the corresponding shell script:
 <script src="https://gist.github.com/elizavetasemenova/6b89a0a9ccc9337dbbd4faf4a83114af.js"></script>
 
 Now we can compile away and develop some high performance routines in C++!
