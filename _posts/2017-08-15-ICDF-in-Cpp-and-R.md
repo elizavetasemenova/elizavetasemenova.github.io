@@ -9,7 +9,7 @@ Attempting to re-write in C++ the Gillespie algorithm, which I earlier implement
 various probability distributions is not as straightforward in C++ as it is in R. Luckily, all I needed was the exponential distribution,
 where the Inverse Cumulative Distribution Function offers an elegant workaround.
 
-<img src="images/Dilbert.png">
+<img src="../images/Dilbert.png">
 
 In general, this method allows to sample from a distribution that is not readily available. To be more precise, given a probability 
 density function $f(x)$ (for continuous variables) or probability mass function $p(x)$ (for discrete variables) or, alternatively, 
