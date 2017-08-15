@@ -24,9 +24,9 @@ random variables this will be a regular inverse CDF. The properties of the ICDF 
 Given a CDF $F,$ if  $u$ is distributed uniformly on $(0,1)$, then $x=F^{-1}(u)$ is distributed as $F,$ that is  $P(X<= x) =F(x).$
 </em>
 
-This method makes simulation of variables following such continuous distributions as Exponential, Cauchy, Logistic, truncated Normal 
+<p>This method makes simulation of variables following such continuous distributions as Exponential, Cauchy, Logistic, truncated Normal 
 and Pareto distributions straightforward. Knowledge of the relationships between distributions provides ways of deriving simulations of, 
-for instance, Chi Squared, Gamma and Beta from the Exponential. In the same way Student’s distribution can be derived from Cauchy. 
+for instance, Chi Squared, Gamma and Beta from the Exponential. In the same way Student’s distribution can be derived from Cauchy.</p>
 
 In the codes presented below I implemented the ICDF method to sample from the Exponential distribution with parameter $\lambda$. The plots
 aim to compare the simulation resulting from the C++ and R implementations based on ICDF, as well the the built-in R functionality.
