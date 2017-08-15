@@ -40,6 +40,14 @@ Which other obstacles are awaiting on the path of translating the Gillespie algo
 
 <script src="https://gist.github.com/elizavetasemenova/37209f64e57e9bc8260d3321a9831050.js"></script>
 
-<img src="/images/ICDF1.png" style="max-width: 20%;>
-<img src="/images/ICDF2.png" style="max-width: 20%;>
-<img src="/images/ICDF3.png" style="max-width: 20%;>
+<div class="" style="max-width: 20%;max-height: 20%;display: inline-block;">
+<img src="/images/ICDF1.png">
+</div>
+
+<div class="" style="max-width: 20%;max-height: 20%;display: inline-block;">
+<img src="/images/ICDF2.png">
+</div>
+
+<div class="" style="max-width: 20%;max-height: 20%;display: inline-block;">
+<img src="/images/ICDF3.png">
+</div>
