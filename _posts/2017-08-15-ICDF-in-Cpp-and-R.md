@@ -29,7 +29,7 @@ and Pareto distributions straightforward. Knowledge of the relationships between
 for instance, Chi Squared, Gamma and Beta from the Exponential. In the same way Student’s distribution can be derived from Cauchy.</p>
 
 In the codes presented below I implemented the ICDF method to sample from the Exponential distribution with parameter $\lambda$. The plots
-aim to compare the simulation resulting from the C++ and R implementations based on ICDF, as well the the built-in R functionality.
+aim to compare the simulations resulting from the C++ and R implementations based on ICDF, as well the the built-in R functionality.
 
 Similar to <a href="https://elizavetasemenova.github.io/blog/2017/08/08/C++-easily-compiled-in-command-line">the previous post</a> we can 
 use the workflow to compile and execute the C++ code with
