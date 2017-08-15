@@ -37,3 +37,9 @@ use the workflow to compile and execute the C++ code with
 <b>sh compileICDF.sh</b>
 
 Which other obstacles are awaiting the enterprise of translating the Gillespie algorithm into C++? Stay tuned and I will keep you posted!
+
+<script src="https://gist.github.com/elizavetasemenova/37209f64e57e9bc8260d3321a9831050.js"></script>
+
+<img src="/images/ICDF1.png">
+<img src="/images/ICDF2.png">
+<img src="/images/ICDF3.png">
