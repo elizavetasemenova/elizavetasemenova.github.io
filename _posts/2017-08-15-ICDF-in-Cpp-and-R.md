@@ -10,6 +10,7 @@ various probability distributions is not as straightforward in C++ as it is in R
 where the Inverse Cumulative Distribution Function offers an elegant workaround.
 
 <img src="../images/Dilbert.png">
+<font size="-1">Source: http://dilbert.com/strip/2001-10-25</font>
 
 In general, this method allows to sample from a distribution that is not readily available. To be more precise, given a probability 
 density function $f(x)$ (for continuous variables) or probability mass function $p(x)$ (for discrete variables) or, alternatively, 
