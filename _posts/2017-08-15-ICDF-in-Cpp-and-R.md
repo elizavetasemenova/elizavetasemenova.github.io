@@ -20,9 +20,9 @@ distribution with a known explicit form of the ICDF. The simulation is enabled b
 $F^{-}(u)=min\{x: F(x) >= u\}, u \in [0,1]$ with the properties $ F^{-1}(F(x))<=x$ and  $ F(F^{-1}(u))<=u.$ For continuous
 random variables this will be a regular inverse CDF. The properties of the ICDF suggest the inverse transform method:
 
-<p>
+<p><em>
 Given a CDF $F,$ if  $u$ is distributed uniformly on $(0,1)$, then $x=F^{-1}(u)$ is distributed as $F,$ that is  $P(X<= x) =F(x).$
-</p>
+</p></em>
 
 This method makes simulation of variables following such continuous distributions as Exponential, Cauchy, Logistic, truncated Normal 
 and Pareto distributions straightforward. Knowledge of the relationships between distributions provides ways of deriving simulations of, 
