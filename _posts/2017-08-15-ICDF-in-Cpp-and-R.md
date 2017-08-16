@@ -7,7 +7,7 @@ comments: true
 
 Attempting to re-write in C++ the Gillespie algorithm, which I earlier implemented in R, I stumbled upon the fact that sampling from 
 various probability distributions is not so straightforward in C++. Luckily, all I needed was the exponential distribution,
-where the Inverse Cumulative Distribution Function offers an elegant workaround.
+where the Inverse Cumulative Distribution Function offers an elegant workaround. This post contains the explanantion and implementation of the method.
 
 <img src="/images/Dilbert.png">
 <font size="-1">Source: http://dilbert.com/strip/2001-10-25</font>
