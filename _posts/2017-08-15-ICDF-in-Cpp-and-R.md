@@ -1,5 +1,5 @@
 ---
-ayout: post
+layout: post
 title: The Inverse Cumulative Distribution Function (ICDF) sampling method implemented in C++ and R.
 date: 2017-08-15
 comments: true
