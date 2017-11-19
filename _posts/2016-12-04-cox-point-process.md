@@ -9,7 +9,7 @@ Cox point process is another name for the Poisson process with random intensity.
 for specified number of observations and regression coefficients generate a covariate and corresponding response,
 compute the mean and estimate the parameters.
 
-``` R
+```{r}
 set.seed(1234)
 
 # number of observations     
