@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Connectivity issues while teaching at a robotics worshop.
+title: Teaching how to build and program a drawing robot.
 date: 2017-11-19
 comments: true
 ---
