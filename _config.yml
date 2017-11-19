@@ -4,4 +4,3 @@ markdown: kramdown
 kramdown:
   input: GFM
 permalink: /blog/:year/:month/:day/:title
-theme: cayman
