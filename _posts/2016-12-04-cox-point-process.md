@@ -9,7 +9,7 @@ Cox point process is another name for the Poisson process with random intensity.
 for specified number of observations and regression coefficients generate a covariate and corresponding response,
 compute the mean and estimate the parameters.
 
-´´´ R
+``` R
 set.seed(1234)
 
 # number of observations     
@@ -38,7 +38,7 @@ print(ci <- confint(fit))
 ##                 2.5 %    97.5 %
 ## (Intercept) 1.9527395 2.0048361
 ## x           0.1996732 0.2124106
-´´´
+
 
 <script src="https://gist.github.com/elizavetasemenova/af7c2e8cd908f725076856e16be4d1f8.js"></script>
 
