@@ -24,7 +24,7 @@ Ah, these Adults! :) Then a moment came, when laptops were not able to connect t
 “too many Mirobot connections”. So we had to connect all of the Mirobots to the common external WiFi, and then be fetching them 
 individually from there.
 
-<img src="/images/Mirobot_too_many.JPG">
+<img src="/images/Mirobot_too_many.JPG" width="50%">
 
 Among tasks, we proposed participants to draw a square, a triangle, a polygon, a letter, their own name or the entire English alphabet. 
 It was very entertaining to observe some experimental maths going on: people would not remember trigonometry too well, and would try to 
