@@ -37,8 +37,8 @@ fit$coefficients
 print(ci <- confint(fit))
 ##                 2.5 %    97.5 %
 ## (Intercept) 1.9527395 2.0048361
-## x           0.1996732 0.2124106
-
+## x           0.1996732 0.2124106
+```
 
 <script src="https://gist.github.com/elizavetasemenova/af7c2e8cd908f725076856e16be4d1f8.js"></script>
 
