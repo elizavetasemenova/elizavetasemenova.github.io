@@ -34,7 +34,7 @@ Except for drawing (moving), Mirobots can also beep. Coming back to the alphabet
 
 One participant did not have a laptop with her and was controlling the Mirobot from her phone via the drag-and-drop menu: it works jst fine!
 
-All Apps of the Mirobot have simulation mode: apps.mirobot.io. So, even if you do not have a robot at hand, you can practice programming 
+All Apps of the Mirobot have simulation mode: http://apps.mirobot.io/. So, even if you do not have a robot at hand, you can practice programming 
 it there. Here is what came out when I programmed it to write my name: 
 
 <img src="/images/Mirobot_drawing.png">
