@@ -102,10 +102,22 @@ Finite realizations of the stationary Gaussian process $f$ compose a vector dist
 \Sigma_{ij} =  \text{R}^{\theta}(d_{ij}).
 \end{equation}
 Here $\text{R}^{\theta}$ is an isomorphic spatial covariance function depending on the parameters $\theta$ and the distance between locations $d_{ij}.$ We opt for the Gaussian as the functional form of $\text{R}^{\theta}$ and this is crucial for our further considerations:
+
 \begin{equation}
 \text{R}_{ij} = \sigma^2\exp\Big(- \frac{1}{2l^2}||x_i - x_j ||_2^2 \Big) =  \sigma^2\exp \Big( - \frac{1}{2l^2} \sum_{d=1}^{D} (x_{i}^d-x_{j}^d)^2 \Big).
 \end{equation}
+
 The sum in the above formula is taken over all dimensions. Parameter $l$ denotes the length scale and can be chosen differently for different dimensions. For Bayesian inference of the vector-parameter $ \theta = ( \boldsymbol{\beta}, \sigma^2, l)$ and computation of the posterior distribution
 $\pi (\theta | S ) \propto L(S| \theta ) \cdot \pi(\theta)$
 the priors $\pi(\theta)$ need to be selected. 
+
+Simulation-based inference requires realizations of the multivariate normal distribution $f \sim \text{MVN}(m,\Sigma),$ generated from the density $(2 \pi)^{-d/2} |\Sigma|^{-1/2} \exp( - \frac{1}{2} (x-m)^T \Sigma^{-1} (x-m))$ . The covariance matrix $\Sigma$ spans $N =n_y n_x$ and $N = n_y n_x n_t$ cells for spatial and spatiotemporal models, respectively. Hence, the size of the covariance matrix is $N^2$, and constitutes a computational bottleneck referring both to the run-time and required storage. To draw from the multivariate normal distribution $ \text{MVN}(0, \Sigma)$ and avoid matrix inversion, as well as the determinant calculation, an improvement can be achieved through the Cholesky factorization, i.e. a matrix $L,$ such that 
+\begin{equation}
+\Sigma= L L^T.
+\end{equation}
+In this case, if $z$ is an $N$-vector generated as $\text{MVN}(0, I_n),$ then 
+\begin{equation}
+Lz \sim \text{MVN}(0, \Sigma).
+\end{equation}
+This algorithm requires storage for the matrix $L$ of size $N \times N$. To mitigate this issue we exploit the \textit{Kronecker (tensor) algebra}, as well as matrix-normal and array-normal distributions as described below.
 
