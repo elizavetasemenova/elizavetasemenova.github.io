@@ -210,7 +210,7 @@ In the same spirit, this modeling framework can be extended to time-dependent pr
 \end{equation}
 The covariance function of the spatiotemporal process $f(s,t)$ is assumed to be of the separable form
 \begin{equation}
-\cov(f(s,t),f(s',t'))=R^s(||s-s'||)R^t(||t-t'||),
+\text{cov}(f(s,t),f(s',t'))=R^s(||s-s'||)R^t(||t-t'||),
 \end{equation}
 i.e. the dependence across space and time is multiplicative. Seasonality is modeled as a linear combination of harmonic functions. Trend is expressed as a yearly factor. Thus, the log-intensity for the fitting procedure is discretized as
 \begin{equation}
