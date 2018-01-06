@@ -144,9 +144,11 @@ can be written as a Kronecker product of D smaller marginal covariance matrices.
 \Sigma = V \otimes U.
 \end{equation}
 Instead of storing and inverting an $N \times N$ matrix, it suffices to store one $n_y \times n_y$ and one $n_x \times n_x$ matrices. Further gains can be made by avoiding $N \times N$ matrices in all intermediate computations and using the *matrix normal distribution* instead. An $n_y \times n_x$ matrix $f_{n_y,n_x}$ is said to follow the matrix-normal distribution
+
 \begin{equation}
-f_{n_y,n_x} \sim \text{MN}_{n_y,n_x}(\mu_{n_y,n_x}, U, V)
+f_{n_y,n_x} \sim MN_{n_y,n_x}(\mu_{n_y,n_x}, U, V)
 \end{equation}
+
 with the $n_y \times n_x$ matrix-mean $\mu_{n_y,n_x}$, $n_y \times n_x$ between-rows covariance $U$ and $n_x \times n_x$ between-columns covariance $V$ if and only if 
 \begin{equation}
 vec(f_{n_y,n_x}) \sim \text{MVN}( vec(\mu_{n_y,n_x}), V \otimes U),
