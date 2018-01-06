@@ -46,6 +46,6 @@ As before, $\lambda(D)$ should be computed as an integral over the domain $D$.
 
 The fitting of the model can be done either via this likelihood or, alternatively, via discretization of the study region $D$ into cells and the \textit{grid approach}: despite the assumption of the continuity of the process, for computational purposes the study region is discretized and is being covered with a set of disjoint cells. In the framework of the grid approach all observed points are being framed by a discretized observation window. For each cell of this grid $c_i$ the observed number of cases falling within a grid cell $y_i$ are being collected and attributed to the cell:
 \begin{equation}
-y_{i} \mid \lambda(c_i)  &\sim \text{Pois}(\lambda(c_i)),  \lambda(c_i) \approx \frac{\vert D \vert}{K} \lambda(g_i),
+y_{i} \mid \lambda(c_i) \sim \text{Pois}(\lambda(c_i)),  \lambda(c_i) \approx \frac{\vert D \vert}{K} \lambda(g_i),
 \end{equation}
 where $K$ is the overall number of cells and $g_i$ denotes a cell centroid. 
