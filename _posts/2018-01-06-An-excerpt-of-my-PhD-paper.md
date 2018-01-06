@@ -126,10 +126,10 @@ If $A$ is an $m \times n$ matrix, and $B$ is an $p \times q$ matrix, then the *K
 A \otimes B = 
 \end{equation}
 \begin{equation}
-\begin{bmatrix} a_{11}B & ..... & a_{1n}B \end{bmatrix}
+\begin{bmatrix} a_{11}B & .... & a_{1n}B \end{bmatrix}
 \end{equation}
 \begin{equation}
-\begin{bmatrix}\\ ....... \\ \end{bmatrix}
+\begin{bmatrix}\\ .......... \\ \end{bmatrix}
 \end{equation}
 \begin{equation}
 \begin{bmatrix} a_{m1}B & ... & a_{mn}B  \end{bmatrix}.
