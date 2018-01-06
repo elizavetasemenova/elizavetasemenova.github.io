@@ -126,10 +126,10 @@ If $A$ is an $m \times n$ matrix, and $B$ is an $p \times q$ matrix, then the *K
 A \otimes B = 
 \end{equation}
 \begin{equation}
-\begin{bmatrix} a_{11}B & ... & a_{1n}B \end{bmatrix}
+\begin{bmatrix} a_{11}B & ..... & a_{1n}B \end{bmatrix}
 \end{equation}
 \begin{equation}
-\begin{bmatrix}\\ ... \\ \end{bmatrix}
+\begin{bmatrix}\\ ....... \\ \end{bmatrix}
 \end{equation}
 \begin{equation}
 \begin{bmatrix} a_{m1}B & ... & a_{mn}B  \end{bmatrix}.
@@ -148,11 +148,11 @@ f_{n_y,n_x} \sim \text{MN}_{n_y,n_x}(\mu_{n_y,n_x}, U, V)
 \end{equation}
 with the $n_y \times n_x$ matrix-mean $\mu_{n_y,n_x}$, $n_y \times n_x$ between-rows covariance $U$ and $n_x \times n_x$ between-columns covariance $V$ if and only if 
 \begin{equation}
-\vecop(f_{n_y,n_x}) \sim \text{MVN}( \vecop(\mu_{n_y,n_x}), V \otimes U),
+vec(f_{n_y,n_x}) \sim \text{MVN}( vec(\mu_{n_y,n_x}), V \otimes U),
 \end{equation}
-where $\vecop(X)$ denotes vectorization of the matrix $X,$ i.e. a vector of length $n_y n_x$ obtained by stacking columns of the matrix $X$ one under another. Vectorization operator has an important property which connects it to the Kronecker product. Let $A$ be an $n_y \times n_y$, $X$ an $n_y \times n_x$ and $B$ a $n_x \times n_x$ matrices, respectively. Then it holds
+where $vec(X)$ denotes vectorization of the matrix $X,$ i.e. a vector of length $n_y n_x$ obtained by stacking columns of the matrix $X$ one under another. Vectorization operator has an important property which connects it to the Kronecker product. Let $A$ be an $n_y \times n_y$, $X$ an $n_y \times n_x$ and $B$ a $n_x \times n_x$ matrices, respectively. Then it holds
 \begin{equation}
-(B \otimes A) \vecop(X) = \vecop(AXB^T).
+(B \otimes A) vec(X) = vec(AXB^T).
 \end{equation}
 
 Let $L$ be the Cholesky factor of the matrix $\Sigma$, which allows the Kronecker decomposition $\Sigma= V \otimes U,$ and let  $L_V$ and $L_U$ be the square roots of $V$ and $U$, respectively. Then $V\otimes U = (L_V L_V^T) \otimes (L_U L_U^T) = (L_V \otimes L_U) (L_V \otimes L_U)^T$ due to the properties of the Kronecker product and it follows, that
@@ -160,18 +160,18 @@ Let $L$ be the Cholesky factor of the matrix $\Sigma$, which allows the Kronecke
 L= L_V \otimes L_U.
 \end{equation}
 
-By $ \vecop^{-1}_{n_y, n_x}$ we denote the operation of mechanical unstacking of a vector into a matrix with $n_y$ rows and $n_x$ columns in the column-major order. An important implication of the two properties listed above is a method for sampling from the matrix-normal distribution: if 
+By $ vec^{-1}_{n_y, n_x}$ we denote the operation of mechanical unstacking of a vector into a matrix with $n_y$ rows and $n_x$ columns in the column-major order. An important implication of the two properties listed above is a method for sampling from the matrix-normal distribution: if 
 \begin{equation}
 z_{n_y, n_x} \sim \text{MN}_{n_y, n_x}(0, I, I)
 \end{equation}
 is an $n_y \times n_x$ matrix of independent draws from the standard normal distribution, then 
 \begin{align}
-L_U z_{n_y, n_x} L_V^T &= \vecop^{-1}_{n_y,n_x}((L_V \otimes L_U) \vecop(z_{n_y,n_x})) \\
-&\sim  \vecop^{-1}_{n_y,n_x}(\text{MVN}(0, L L^T)) = \text{MN}_{n_y,n_x}(0, U, V).
+L_U z_{n_y, n_x} L_V^T &= vec^{-1}_{n_y,n_x}((L_V \otimes L_U) vec(z_{n_y,n_x})) \\
+&\sim  vec^{-1}_{n_y,n_x}(\text{MVN}(0, L L^T)) = \text{MN}_{n_y,n_x}(0, U, V).
 \end{equation}
 Generalizing this fact for 3d, we obtain
 \begin{align}
- \vecop^{-1}_{n_y,n_x,n_t}((L_W \otimes L_V \otimes L_U) \vecop(z_{n_y,n_x, n_t})) \sim  \text{MN}_{n_y,n_x,n_t}(0, U, V, W).
+ vec^{-1}_{n_y,n_x,n_t}((L_W \otimes L_V \otimes L_U) vec(z_{n_y,n_x, n_t})) \sim  \text{MN}_{n_y,n_x,n_t}(0, U, V, W).
 \end{equation}
 
 
