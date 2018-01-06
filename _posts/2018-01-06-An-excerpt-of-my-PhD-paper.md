@@ -29,7 +29,7 @@ Log-Gaussian Cox Process is a doubly-stochastic process with Gaussian log-intens
 ## Poisson count distribution
 A customary assumption is that the number of points within a point pattern follows the Poisson distribution:
 \begin{equation}
-\text{P}_\text{po}^{\lambda} \left[ N(D)=n \right] = \frac{\exp(\lambda(D)) (\lambda(D))^n}{n!}
+P_{po}^{\lambda} \left[ N(D)=n \right] = \frac{\exp(\lambda(D)) (\lambda(D))^n}{n!}
 \end{equation}
 and the data is distributed as a Poisson process, conditional on the intensity function $\lambda(s)$ : 
 \begin{equation}
