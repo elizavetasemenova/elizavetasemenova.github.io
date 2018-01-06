@@ -52,8 +52,9 @@ y_{i} \mid \lambda(c_i) \sim \text{Pois}(\lambda(c_i)),
 \lambda(c_i) \approx \frac{\vert D \vert}{K} \lambda(g_i).
 \end{equation}
 where $K$ is the overall number of cells and $g_i$ denotes a cell centroid. I.e. the observed counts follow the Poisson distribution, conditioned on the random field. Further we show that the higher the number of cells, the closer is the discretized representation of the LGCP to its true continuous version. By independence of the counts within disjoint cells we compute
-
+```
 L^{\text{grid}}_{\text{po}} = \prod\limits_{i=1}^{K}  \frac{\exp(\lambda(c_i)) (\lambda(c_i))^{y_i}}{{y_i}!} \propto \prod\limits_{i=1}^{K}  \exp(\lambda(c_i)) (\lambda(c_i))^{y_i}
  = \exp \left(-\sum\limits_{i=1}^{K}\lambda(c_i) \right) \prod (\lambda(c_i))^{y_i} =  \exp \left(-\lambda(D) \right) \prod (\lambda(c_i))^{y_i},
+ ```
 
-he second product is taken over the cells with non-zero counts. As the volume of each cell becomes smaller $\vert c_i \vert \to 0$, the counts $y_i$ within cells become 0 or 1 and we obtain the same likelihood as $L_{\text{po}}.$ 
+the second product is taken over the cells with non-zero counts. As the volume of each cell becomes smaller $\vert c_i \vert \to 0$, the counts $y_i$ within cells become 0 or 1 and we obtain the same likelihood as $L_{\text{po}}.$ 
