@@ -123,7 +123,16 @@ This algorithm requires storage for the matrix $L$ of size $N \times N$. To miti
 If $A$ is an $m \times n$ matrix, and $B$ is an $p \times q$ matrix, then the *Kronecker-product* (or *tensor product*)  $A \otimes B$ is an $m p \times n q$ matrix with elements
 
 \begin{equation}
-A \otimes B = \begin{bmatrix} a_{11}B & ... & a_{1n}B \\ ... \\a_{m1}B & ... & a_{mn}B  \end{bmatrix}.
+A \otimes B = 
+\end{equation}
+\begin{equation}
+\begin{bmatrix} a_{11}B & ... & a_{1n}B \end{bmatrix}
+\end{equation}
+\begin{equation}
+\begin{bmatrix}\\ ... \\ \end{bmatrix}
+\end{equation}
+\begin{equation}
+\begin{bmatrix} a_{m1}B & ... & a_{mn}B  \end{bmatrix}.
 \end{equation}
 
 All further explanations will be made for the 2d case and generalized after to 3d.
