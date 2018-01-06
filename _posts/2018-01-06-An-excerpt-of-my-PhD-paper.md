@@ -172,14 +172,14 @@ z_{n_y, n_x} \sim \text{MN}_{n_y, n_x}(0, I, I)
 is an $n_y \times n_x$ matrix of independent draws from the standard normal distribution, then 
 
 \begin{equation}
-L_U z_{n_y, n_x} L_V^T = \text{vec}^{-1}_{n_y,n_x} ((L_V \otimes L_U) \text{vec}(z_{n_y,n_x})
+L_U z_{n_y, n_x} L_V^T = vec_{n_y,n_x}^{-1} ((L_V \otimes L_U) vec(z_{n_y,n_x})
 \end{equation}
 \begin{equation}
-\sim  \text{vec}^{-1}_{n_y,n_x}(\text{MVN}(0, L L^T)) = \text{MN}_{n_y,n_x}(0, U, V).
+\sim  vec_{n_y,n_x}^{-1}(\text{MVN}(0, L L^T)) = \text{MN}_{n_y,n_x}(0, U, V).
 \end{equation}
 Generalizing this fact for 3d, we obtain
 \begin{equation}
- \text{vec}^{-1}_{n_y,n_x,n_t}((L_W \otimes L_V \otimes L_U) \text{vec}(z_{n_y,n_x, n_t})) \sim  \text{MN}_{n_y,n_x,n_t}(0, U, V, W).
+  vec_{n_y,n_x,n_t}^{-1}((L_W \otimes L_V \otimes L_U) vec(z_{n_y,n_x, n_t})) \sim  \text{MN}_{n_y,n_x,n_t}(0, U, V, W).
 \end{equation}
 
 
@@ -191,7 +191,7 @@ Based on equality (\*) there are two ways to perform the sampling from the array
 We tested two identical programs,  formalized in the probabilistic programming language Stan (Carpenter et al. (2016)), which only differ in the part of sampling the values of the Gaussian Process and compare average run-times per chain.
 
 ## Incomplete grid
-Although all formulas were laid out in rectangular array form, not all entries of the computed mean are meaningful due to the shape of the study region. This issue is know as the \textit{incomplete grid}. Corrections can be made to account for irregular shapes by treating the points outside the border as latent.
+Although all formulas were laid out in rectangular array form, not all entries of the computed mean are meaningful due to the shape of the study region. This issue is know as the *incomplete grid*. Corrections can be made to account for irregular shapes by treating the points outside the border as latent.
 
 ## Spacetime model formulation
 For spatial processes without time dependence, the modeling framework is formulated as follows:
