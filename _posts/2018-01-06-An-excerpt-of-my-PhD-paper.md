@@ -119,3 +119,9 @@ Lz \sim \text{MVN}(0, \Sigma).
 \end{equation}
 This algorithm requires storage for the matrix $L$ of size $N \times N$. To mitigate this issue we exploit the \textit{Kronecker (tensor) algebra}, as well as matrix-normal and array-normal distributions as described below.
 
+## Kronecker algebra
+If $A$ is an $m \times n$ matrix, and $B$ is an $p \times q$ matrix, then the \textit{Kronecker-product} (or\textit{ tensor product})  $A \otimes B$ is an $m p \times n q$ matrix with elements
+\begin{equation}
+A \otimes B = \begin{bmatrix} a_{11}B & ... & a_{1n}B \\ ... \\a_{m1}B & ... & a_{mn}B  \end{bmatrix}.
+\end{equation}
+All further explanations will be made for the 2d case and generalized after to 3d.
