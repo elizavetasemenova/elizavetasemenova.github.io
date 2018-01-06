@@ -101,8 +101,9 @@ Finite realizations of the stationary Gaussian process $f$ compose a vector dist
 \end{equation}
 Here $\text{R}^{\theta}$ is an isomorphic spatial covariance function depending on the parameters $\theta$ and the distance between locations $d_{ij}.$ We opt for the Gaussian as the functional form of $\text{R}^{\theta}$ and this is crucial for our further considerations:
 
+[FORM!]
 \begin{equation}
-\text{R}_{ij} = \sigma^2 \exp (- 1/(2l^2) \vert \vert x_i - x_j \vert \vert_2^2 ) =  \sigma^2 \exp ( - 1/(2l^2) \sum_{d=1}^{D} (x_{i}^d-x_{j}^d)^2 ).
+\text{R}_{ij} =  \sigma^2 \exp ( - 1/(2l^2) \sum_{d=1}^{D} (x_{i}^d-x_{j}^d)^2 ).
 \end{equation}
 
 The sum in the above formula is taken over all dimensions. Parameter $l$ denotes the length scale and can be chosen differently for different dimensions. For Bayesian inference of the vector-parameter $ \theta = ( \boldsymbol{\beta}, \sigma^2, l)$ and computation of the posterior distribution
