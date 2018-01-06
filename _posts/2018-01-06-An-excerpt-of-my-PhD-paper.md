@@ -69,9 +69,9 @@ the second product is taken over the cells with non-zero counts. As the volume o
 Now we challenge the traditional distribution assumption and derive log-likelihood for modeling of point patterns with Negative Binomial count distribution. For this we will use the following parametrization: 
 
 \begin{equation}
-\text{P}_\text{nb}^{\lambda, \phi} \left[ N(D)=n \right] = \binom{n + \phi -1}{n} \left(\
-{\lambda}{\lambda+\phi}\right)^n \left(\frac{\phi}{\lambda+\phi}\right)^{\phi},
+\text{P}_\text{nb}^{\lambda, \phi} \left[ N(D)=n \right] = \binom{n + \phi -1}{n} \left(\{\lambda}{\lambda+\phi}\right)^n \left(\frac{\phi}{\lambda+\phi}\right)^{\phi},
 \end{equation}
+
 where $\lambda = \lambda(D)$ and $\phi>0$ is the over-dispersion parameter. Under this parametrization the mean and variance equal correspondingly $\text{E}[N(D)] = \lambda(D)$ and $\text{Var}[N(D)] = \lambda(D) + \frac{(\lambda(D))^2}{\phi}.$
 Plugging this into the formula for $L(S),$ we obtain
 \begin{equation}
