@@ -160,10 +160,13 @@ Let $L$ be the Cholesky factor of the matrix $\Sigma$, which allows the Kronecke
 L= L_V \otimes L_U.
 \end{equation}
 
-By $ vec^{-1}_{n_y, n_x}$ we denote the operation of mechanical unstacking of a vector into a matrix with $n_y$ rows and $n_x$ columns in the column-major order. An important implication of the two properties listed above is a method for sampling from the matrix-normal distribution: if 
+By $vec^{-1}_{n_y, n_x}$ 
+
+we denote the operation of mechanical unstacking of a vector into a matrix with $n_y$ rows and $n_x$ columns in the column-major order. An important implication of the two properties listed above is a method for sampling from the matrix-normal distribution: if 
 \begin{equation}
 z_{n_y, n_x} \sim \text{MN}_{n_y, n_x}(0, I, I)
 \end{equation}
+
 is an $n_y \times n_x$ matrix of independent draws from the standard normal distribution, then 
 \begin{align}
 L_U z_{n_y, n_x} L_V^T &= vec^{-1}_{n_y,n_x}((L_V \otimes L_U) vec(z_{n_y,n_x})) \\
@@ -175,7 +178,9 @@ Generalizing this fact for 3d, we obtain
 \end{equation}
 
 
-It follows, that instead of sampling from $\text{MVN}(0, \Sigma)$ via $f_N=Lz_N$ one can sample from the matrix-normal distribution $f_{n_y,n_x}= \text{MN}_{n_y,n_x}(0, U, V).$ This approach requires computation and storage of the Cholesky factors $U$ and $V$ of dimensions $n_y \times n_y$ and $n_x \times n_x,$ respectively, which is a noticeable parsimony compared to sampling through $L$: we need to store $n_y^2+n_x^2$ instead of $n_y^2n_x^2$ numbers and perform $O(n_y^3+n_x^3)$ operations instead of $O(n_y^3n_x^3)$. The last statement follows from the fact, that, in general, computation of the Cholesky factor of an $n \times n$ matrix requires $O(n^3)$ operations. Hence, the computational complexity and storage requirements grow linearly and not multiplicatively with each added dimension. 
+It follows, that instead of sampling from $\text{MVN}(0, \Sigma)$ via $f_N=Lz_N$ one can sample from the matrix-normal distribution $f_{n_y,n_x}= \text{MN}_{n_y,n_x}(0, U, V).$ 
+
+This approach requires computation and storage of the Cholesky factors $U$ and $V$ of dimensions $n_y \times n_y$ and $n_x \times n_x,$ respectively, which is a noticeable parsimony compared to sampling through $L$: we need to store $n_y^2+n_x^2$ instead of $n_y^2n_x^2$ numbers and perform $O(n_y^3+n_x^3)$ operations instead of $O(n_y^3n_x^3)$. The last statement follows from the fact, that, in general, computation of the Cholesky factor of an $n \times n$ matrix requires $O(n^3)$ operations. Hence, the computational complexity and storage requirements grow linearly and not multiplicatively with each added dimension. 
 
 Based on equality (25), there are two ways to perform the sampling from the array-normal distribution. First approach is to address the left hand side of the equality. It was taken by (Fernandes (1968)): originating from the field of stochastic automata, the algorithm computes left vector-matrix product, where the matrix is a Kronecker product of smaller matrices. The second approach is to execute  computations as expressed on the right hand side of (25). Such algorithm was presented in (Saatchi (2012)). Theoretical complexity of the two algorithms is identical, while real computation times may vary, depending on the software of implementation, due to the usage of such features as vectorization. 
 We tested two identical programs,  formalized in the probabilistic programming language Stan (Carpenter et al. (2016)), which only differ in the part of sampling the values of the Gaussian Process and compare average run-times per chain.
