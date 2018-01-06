@@ -96,3 +96,16 @@ Here integration is intractable because of the random term under the integral si
 Treating this quadrature leads to the same computation issues, as when using the computational grid (Diggle (2013)) and fitting cell counts.
 
 For practical applications one would like to keep the highest resolution, available for the spatial covariates while performing the inference. As a consequence, computational burden increases due to calculations on large matrices, required to describe the stochastic effect. Traditional mechanism to fit latent Gaussian models and find numerically posterior estimates of all the random terms comprising the latent field is the simulation-based and computationally intense Markov Chain Monte Carlo. Below we present a computational strategy allowing to reduce complexity and memory usage, applied to the fitting of LGCP and make it more feasible. 
+
+Finite realizations of the stationary Gaussian process $f$ compose a vector distributed as $ \text{MVN}(m,\Sigma)$ with $\Sigma$ being a spatially-structured covariance matrix with elements 
+\begin{equation}
+\Sigma_{ij} =  \text{R}^{\theta}(d_{ij}).
+\end{equation}
+Here $\text{R}^{\theta}$ is an isomorphic spatial covariance function depending on the parameters $\theta$ and the distance between locations $d_{ij}.$ We opt for the Gaussian as the functional form of $\text{R}^{\theta}$ and this is crucial for our further considerations:
+\begin{equation}
+\text{R}_{ij} = \sigma^2\exp\Big(- \frac{1}{2l^2}||x_i - x_j ||_2^2 \Big) =  \sigma^2\exp \Big( - \frac{1}{2l^2} \sum_{d=1}^{D} (x_{i}^d-x_{j}^d)^2 \Big).
+\end{equation}
+The sum in the above formula is taken over all dimensions. Parameter $l$ denotes the length scale and can be chosen differently for different dimensions. For Bayesian inference of the vector-parameter $ \theta = ( \boldsymbol{\beta}, \sigma^2, l)$ and computation of the posterior distribution
+$\pi (\theta | S ) \propto L(S| \theta ) \cdot \pi(\theta)$
+the priors $\pi(\theta)$ need to be selected. 
+
