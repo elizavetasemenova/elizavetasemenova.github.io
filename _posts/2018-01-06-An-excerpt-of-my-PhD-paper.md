@@ -65,7 +65,7 @@ L_{\text{po}}^{\text{grid}} =  \prod\limits_{i=1}^{K}\exp(\lambda(c_i))(\lambda(
 
 the second product is taken over the cells with non-zero counts. As the volume of each cell becomes smaller $\vert c_i \vert \to 0$, the counts $y_i$ within cells become 0 or 1 and we obtain the same likelihood as $L_{\text{po}}.$ Thus, this fitting approach represents an alternative to the one through direct likelihood: instead of using only the points of the observed events and having to evaluate the integral over the observation region, we create artificial counts on a fine grid and use them to discover the intensity. 
 
-### Negative Binomial count distribution
+## Negative Binomial count distribution
 Now we challenge the traditional distribution assumption and derive log-likelihood for modeling of point patterns with Negative Binomial count distribution. For this we will use the following parametrization: 
 
 \begin{equation}
@@ -79,3 +79,20 @@ L_{\text{nb}}(S) =\frac{(n+\phi+1)...(\phi+1) \phi^{\phi+1}}{(\lambda(D) + \phi)
 \end{equation}
 As in the case of the Poisson distribution, the likelihood requires the computation of the integral $\lambda(D).$ By analogy with the Poisson case we propose to apply the 
 gridded approach to the Negative Binomial distribution and compare run times of the four fitting strategies.
+
+## Discretization of the Gaussian Process
+ When the context allows for covariates, the intensity takes the form
+\begin{equation}
+ \lambda(s) = \exp(\textbf{X}^T(s) \boldsymbol{\beta} + f(s)),
+\end{equation}
+where $f$ stands for the Gaussian Process. This case of the Cox process is important for practical use due to its ability to be linked to meaningful explanatory factors. Log-likelihood in the case of, for instance, the Poisson count distribution is composed as
+\begin{equation}
+\log L = - {\int_D \exp\{ \textbf{X}^T(s) \boldsymbol{\beta} + f(s)\} ds} + \sum\limits_{i=1}^{n} \{ \textbf{X}^T(s_i) \boldsymbol{\beta} + f(s_i)\}.
+\end{equation}
+Here integration is intractable because of the random term under the integral sign. Furthermore, the integral creates high computational burden as it is performed over the entire domain $D.$ An integration quadrature formula can be used, for instance,
+\begin{equation}
+\int_D \exp\{ \textbf{X}^T(s) \boldsymbol{\beta} + f(s)\} ds  \approx \frac{|D|}{K} \sum_{k=1}^{K} \exp\{ \textbf{X}^T(g_k) \boldsymbol{\beta} + f(g_k)\}.
+\end{equation}
+Treating this quadrature leads to the same computation issues, as when using the computational grid (Diggle (2013)) and fitting cell counts.
+
+For practical applications one would like to keep the highest resolution, available for the spatial covariates while performing the inference. As a consequence, computational burden increases due to calculations on large matrices, required to describe the stochastic effect. Traditional mechanism to fit latent Gaussian models and find numerically posterior estimates of all the random terms comprising the latent field is the simulation-based and computationally intense Markov Chain Monte Carlo. Below we present a computational strategy allowing to reduce complexity and memory usage, applied to the fitting of LGCP and make it more feasible. 
