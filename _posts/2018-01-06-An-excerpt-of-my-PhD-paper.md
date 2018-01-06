@@ -56,7 +56,7 @@ where $K$ is the overall number of cells and $g_i$ denotes a cell centroid. I.e.
 [FORM1]
 
 \begin{equation}
-L_{\text{po}}^{\text{grid}}(s_1,\dots,s_n, s_i \in D; \lambda(s)) = \exp(-\lambda(D)) \prod\limits_{i=1}^{n}\lambda(s_i),
+L_{\text{po}}^{\text{grid}} =  \prod\limits_{i=1}^{K}\exp(\lambda(c_i))(\lambda(c_i))^{y}/{y!},
 \end{equation}
 
 the second product is taken over the cells with non-zero counts. As the volume of each cell becomes smaller $\vert c_i \vert \to 0$, the counts $y_i$ within cells become 0 or 1 and we obtain the same likelihood as $L_{\text{po}}.$ Thus, this fitting approach represents an alternative to the one through direct likelihood: instead of using only the points of the observed events and having to evaluate the integral over the observation region, we create artificial counts on a fine grid and use them to discover the intensity. 
