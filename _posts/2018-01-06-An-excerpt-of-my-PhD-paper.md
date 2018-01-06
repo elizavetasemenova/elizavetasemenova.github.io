@@ -44,7 +44,7 @@ L_{\text{po}}(s_1,\dots,s_n, s_i \in D; \lambda(s)) = \exp(-\lambda(D)) \prod\li
 \end{equation}
 As before, $\lambda(D)$ should be computed as an integral over the domain $D$.
 
-The fitting of the model can be done either via this likelihood or, alternatively, via discretization of the study region $D$ into cells and the \textit{grid approach}: despite the assumption of the continuity of the process, for computational purposes the study region is discretized and is being covered with a set of disjoint cells. In the framework of the grid approach all observed points are being framed by a discretized observation window. For each cell of this grid $c_i$ the observed number of cases falling within a grid cell $y_i$ are being collected and attributed to the cell:
+The fitting of the model can be done either via this likelihood or, alternatively, via discretization of the study region $D$ into cells and the *grid approach*: despite the assumption of the continuity of the process, for computational purposes the study region is discretized and is being covered with a set of disjoint cells. In the framework of the grid approach all observed points are being framed by a discretized observation window. For each cell of this grid $c_i$ the observed number of cases falling within a grid cell $y_i$ are being collected and attributed to the cell:
 \begin{equation}
 y_{i} \mid \lambda(c_i) \sim \text{Pois}(\lambda(c_i)),
 \end{equation}
@@ -117,10 +117,10 @@ In this case, if $z$ is an $N$-vector generated as $\text{MVN}(0, I_n),$ then
 \begin{equation}
 Lz \sim \text{MVN}(0, \Sigma).
 \end{equation}
-This algorithm requires storage for the matrix $L$ of size $N \times N$. To mitigate this issue we exploit the \textit{Kronecker (tensor) algebra}, as well as matrix-normal and array-normal distributions as described below.
+This algorithm requires storage for the matrix $L$ of size $N \times N$. To mitigate this issue we exploit the *Kronecker (tensor) algebra*, as well as matrix-normal and array-normal distributions as described below.
 
 ## Kronecker algebra
-If $A$ is an $m \times n$ matrix, and $B$ is an $p \times q$ matrix, then the \textit{Kronecker-product} (or\textit{ tensor product})  $A \otimes B$ is an $m p \times n q$ matrix with elements
+If $A$ is an $m \times n$ matrix, and $B$ is an $p \times q$ matrix, then the *Kronecker-product* (or *tensor product*)  $A \otimes B$ is an $m p \times n q$ matrix with elements
 \begin{equation}
 A \otimes B = \begin{bmatrix} a_{11}B & ... & a_{1n}B \\ ... \\a_{m1}B & ... & a_{mn}B  \end{bmatrix}.
 \end{equation}
