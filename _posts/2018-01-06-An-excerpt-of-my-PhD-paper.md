@@ -121,7 +121,52 @@ This algorithm requires storage for the matrix $L$ of size $N \times N$. To miti
 
 ## Kronecker algebra
 If $A$ is an $m \times n$ matrix, and $B$ is an $p \times q$ matrix, then the *Kronecker-product* (or *tensor product*)  $A \otimes B$ is an $m p \times n q$ matrix with elements
+
 \begin{equation}
 A \otimes B = \begin{bmatrix} a_{11}B & ... & a_{1n}B \\ ... \\a_{m1}B & ... & a_{mn}B  \end{bmatrix}.
 \end{equation}
+
 All further explanations will be made for the 2d case and generalized after to 3d.
+
+The covariance function, evaluated over a Cartesian grid, gives rise to a covariance matrix that
+can be written as a Kronecker product of D smaller marginal covariance matrices. The side length of each such square matrix equals the number of cells along the given axis. This result follows from the definition of the Kronecker product and the chosen structure of the correlation matrix, i.e. 
+\begin{equation}
+\Sigma = V \otimes U.
+\end{equation}
+Instead of storing and inverting an $N \times N$ matrix, it suffices to store one $n_y \times n_y$ and one $n_x \times n_x$ matrices. Further gains can be made by avoiding $N \times N$ matrices in all intermediate computations and using the \textit{ matrix normal distribution} instead. An $n_y \times n_x$ matrix $f_{n_y,n_x}$ is said to follow the matrix-normal distribution
+\begin{equation}
+f_{n_y,n_x} \sim \text{MN}_{n_y,n_x}(\mu_{n_y,n_x}, U, V)
+\end{equation}
+with the $n_y \times n_x$ matrix-mean $\mu_{n_y,n_x}$, $n_y \times n_x$ between-rows covariance $U$ and $n_x \times n_x$ between-columns covariance $V$ if and only if 
+\begin{equation}
+\vecop(f_{n_y,n_x}) \sim \text{MVN}( \vecop(\mu_{n_y,n_x}), V \otimes U),
+\end{equation}
+where $\vecop(X)$ denotes vectorization of the matrix $X,$ i.e. a vector of length $n_y n_x$ obtained by stacking columns of the matrix $X$ one under another. Vectorization operator has an important property which connects it to the Kronecker product. Let $A$ be an $n_y \times n_y$, $X$ an $n_y \times n_x$ and $B$ a $n_x \times n_x$ matrices, respectively. Then it holds
+\begin{equation}
+(B \otimes A) \vecop(X) = \vecop(AXB^T).
+\end{equation}
+
+Let $L$ be the Cholesky factor of the matrix $\Sigma$, which allows the Kronecker decomposition $\Sigma= V \otimes U,$ and let  $L_V$ and $L_U$ be the square roots of $V$ and $U$, respectively. Then $V\otimes U = (L_V L_V^T) \otimes (L_U L_U^T) = (L_V \otimes L_U) (L_V \otimes L_U)^T$ due to the properties of the Kronecker product and it follows, that
+\begin{equation}
+L= L_V \otimes L_U.
+\end{equation}
+
+By $ \vecop^{-1}_{n_y, n_x}$ we denote the operation of mechanical unstacking of a vector into a matrix with $n_y$ rows and $n_x$ columns in the column-major order. An important implication of the two properties listed above is a method for sampling from the matrix-normal distribution: if 
+\begin{equation}
+z_{n_y, n_x} \sim \text{MN}_{n_y, n_x}(0, I, I)
+\end{equation}
+is an $n_y \times n_x$ matrix of independent draws from the standard normal distribution, then 
+\begin{align}
+L_U z_{n_y, n_x} L_V^T &= \vecop^{-1}_{n_y,n_x}((L_V \otimes L_U) \vecop(z_{n_y,n_x})) \\
+&\sim  \vecop^{-1}_{n_y,n_x}(\text{MVN}(0, L L^T)) = \text{MN}_{n_y,n_x}(0, U, V).
+\end{equation}
+Generalizing this fact for 3d, we obtain
+\begin{align}
+ \vecop^{-1}_{n_y,n_x,n_t}((L_W \otimes L_V \otimes L_U) \vecop(z_{n_y,n_x, n_t})) \sim  \text{MN}_{n_y,n_x,n_t}(0, U, V, W).
+\end{equation}
+
+
+It follows, that instead of sampling from $\text{MVN}(0, \Sigma)$ via $f_N=Lz_N$ one can sample from the matrix-normal distribution $f_{n_y,n_x}= \text{MN}_{n_y,n_x}(0, U, V).$ This approach requires computation and storage of the Cholesky factors $U$ and $V$ of dimensions $n_y \times n_y$ and $n_x \times n_x,$ respectively, which is a noticeable parsimony compared to sampling through $L$: we need to store $n_y^2+n_x^2$ instead of $n_y^2n_x^2$ numbers and perform $O(n_y^3+n_x^3)$ operations instead of $O(n_y^3n_x^3)$. The last statement follows from the fact, that, in general, computation of the Cholesky factor of an $n \times n$ matrix requires $O(n^3)$ operations. Hence, the computational complexity and storage requirements grow linearly and not multiplicatively with each added dimension. 
+
+Based on equality (25), there are two ways to perform the sampling from the array-normal distribution. First approach is to address the left hand side of the equality. It was taken by (Fernandes (1968)): originating from the field of stochastic automata, the algorithm computes left vector-matrix product, where the matrix is a Kronecker product of smaller matrices. The second approach is to execute  computations as expressed on the right hand side of (25). Such algorithm was presented in (Saatchi (2012)). Theoretical complexity of the two algorithms is identical, while real computation times may vary, depending on the software of implementation, due to the usage of such features as vectorization. 
+We tested two identical programs,  formalized in the probabilistic programming language Stan (Carpenter et al. (2016)), which only differ in the part of sampling the values of the Gaussian Process and compare average run-times per chain.
