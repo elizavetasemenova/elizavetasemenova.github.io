@@ -64,3 +64,18 @@ L_{\text{po}}^{\text{grid}} =  \prod\limits_{i=1}^{K}\exp(\lambda(c_i))(\lambda(
 \end{equation}
 
 the second product is taken over the cells with non-zero counts. As the volume of each cell becomes smaller $\vert c_i \vert \to 0$, the counts $y_i$ within cells become 0 or 1 and we obtain the same likelihood as $L_{\text{po}}.$ Thus, this fitting approach represents an alternative to the one through direct likelihood: instead of using only the points of the observed events and having to evaluate the integral over the observation region, we create artificial counts on a fine grid and use them to discover the intensity. 
+
+### Negative Binomial count distribution
+Now we challenge the traditional distribution assumption and derive log-likelihood for modeling of point patterns with Negative Binomial count distribution. For this we will use the following parametrization: 
+
+\begin{equation}
+\text{P}_\text{nb}^{\lambda, \phi} \left[ N(D)=n \right] = \binom{n + \phi -1}{n} \left(\
+{\lambda}{\lambda+\phi}\right)^n \left(\frac{\phi}{\lambda+\phi}\right)^{\phi},
+\end{equation}
+where $\lambda = \lambda(D)$ and $\phi>0$ is the over-dispersion parameter. Under this parametrization the mean and variance equal correspondingly $\text{E}[N(D)] = \lambda(D)$ and $\text{Var}[N(D)] = \lambda(D) + \frac{(\lambda(D))^2}{\phi}.$
+Plugging this into the formula for $L(S),$ we obtain
+\begin{equation}
+L_{\text{nb}}(S) =\frac{(n+\phi+1)...(\phi+1) \phi^{\phi+1}}{(\lambda(D) + \phi)^{n+\phi}} \prod\limits_{i=1}^{n}\lambda(s_i).
+\end{equation}
+As in the case of the Poisson distribution, the likelihood requires the computation of the integral $\lambda(D).$ By analogy with the Poisson case we propose to apply the 
+gridded approach to the Negative Binomial distribution and compare run times of the four fitting strategies.
