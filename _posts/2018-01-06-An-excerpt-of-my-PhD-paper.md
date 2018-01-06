@@ -160,7 +160,7 @@ Let $L$ be the Cholesky factor of the matrix $\Sigma$, which allows the Kronecke
 L= L_V \otimes L_U.
 \end{equation}
 
-By $vec^{-1}_{n_y, n_x}$ 
+By $\text{vec}^{-1}_{n_y, n_x}$ 
 
 we denote the operation of mechanical unstacking of a vector into a matrix with $n_y$ rows and $n_x$ columns in the column-major order. An important implication of the two properties listed above is a method for sampling from the matrix-normal distribution: if 
 \begin{equation}
@@ -168,12 +168,14 @@ z_{n_y, n_x} \sim \text{MN}_{n_y, n_x}(0, I, I)
 \end{equation}
 
 is an $n_y \times n_x$ matrix of independent draws from the standard normal distribution, then 
-\begin{align}
-L_U z_{n_y, n_x} L_V^T &= vec^{-1}_{n_y,n_x}((L_V \otimes L_U) vec(z_{n_y,n_x})) \\
-&\sim  vec^{-1}_{n_y,n_x}(\text{MVN}(0, L L^T)) = \text{MN}_{n_y,n_x}(0, U, V).
+\begin{equation}
+L_U z_{n_y, n_x} L_V^T = vec^{-1}_{n_y,n_x}((L_V \otimes L_U) vec(z_{n_y,n_x}))
+\end{equation}
+\begin{equation}
+\sim  vec^{-1}_{n_y,n_x}(\text{MVN}(0, L L^T)) = \text{MN}_{n_y,n_x}(0, U, V).
 \end{equation}
 Generalizing this fact for 3d, we obtain
-\begin{align}
+\begin{equation}
  vec^{-1}_{n_y,n_x,n_t}((L_W \otimes L_V \otimes L_U) vec(z_{n_y,n_x, n_t})) \sim  \text{MN}_{n_y,n_x,n_t}(0, U, V, W).
 \end{equation}
 
