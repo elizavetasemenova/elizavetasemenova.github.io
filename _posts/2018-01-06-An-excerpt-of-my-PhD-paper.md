@@ -27,3 +27,19 @@ L(S) = \text{P}\left[ N(D)=n \right] n! \frac{1}{(\lambda(D))^n}\prod\limits_{i=
 Log-Gaussian Cox Process is a doubly-stochastic process with Gaussian log-intensity. Further we consider two possible choices for the probability distribution of the number of points: Poisson and Negative Binomial.
 
 ## Poisson count distribution
+A customary assumption is that the number of points within a point pattern follows the Poisson distribution:
+\begin{equation}
+\text{P}_\text{po}^{\lambda} \left[ N(D)=n \right] = \frac{\exp(\lambda(D)) (\lambda(D))^n}{n!}
+\end{equation}
+and the data is distributed as a Poisson process, conditional on the intensity function $\lambda(s)$ : 
+\begin{equation}
+S \mid \lambda(s) \sim \text{PP}(\lambda(s)).
+\end{equation}
+The likelihood and log-likelihood for point patterns in this case depend on the entire intensity surface and are expressed as
+\begin{equation}
+ \begin{aligned}
+L_{\text{po}}(s_1,\dots,s_n, s_i \in D; \lambda(s)) &= \exp(-\lambda(D)) \prod\limits_{i=1}^{n}\lambda(s_i),\notag\\
+\log L_{\text{po}}(s_1,\dots,s_n, s_i \in D; \lambda(s)) &= -\lambda(D) + \sum\limits_{i=1}^{n}\log \lambda(s_i).
+	\end{aligned}
+\end{equation}
+As before, $\lambda(D)$ should be computed as an integral over the domain $D$.
