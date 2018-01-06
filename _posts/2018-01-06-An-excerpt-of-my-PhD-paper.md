@@ -48,13 +48,4 @@ The fitting of the model can be done either via this likelihood or, alternativel
 \begin{equation}
 y_{i} \mid \lambda(c_i)  &\sim \text{Pois}(\lambda(c_i)),  \lambda(c_i) \approx \frac{\vert D \vert}{K} \lambda(g_i),
 \end{equation}
-where $K$ is the overall number of cells and $g_i$ denotes a cell centroid. I.e. the observed counts follow the Poisson distribution, conditioned on the random field. Further we show that the higher the number of cells, the closer is the discretized representation of the LGCP to its true continuous version. By independence of the counts within disjoint cells we compute
-\begin{equation}
-L^{\text{grid}}_{\text{po}} = \prod\limits_{i=1}^{K}  \frac{\exp(\lambda(c_i)) (\lambda(c_i))^{y_i}}{{y_i}!} \propto \prod\limits_{i=1}^{K}  \exp(\lambda(c_i)) (\lambda(c_i))^{y_i} 
-\end{equation}
-\begin{equation}
- = \exp \left(-\sum\limits_{i=1}^{K}\lambda(c_i) \right) \prod (\lambda(c_i))^{y_i} =  \exp \left(-\lambda(D) \right) \prod (\lambda(c_i))^{y_i},
-\end{equation}
-the second product is taken over the cells with non-zero counts. As the volume of each cell becomes smaller $\vert c_i \vert \to 0$, the counts $y_i$ within cells become 0 or 1 and we obtain the same likelihood as $L_{\text{po}}.$ 
-%it has been shown in (Waagpetersen (2004)) that posterior distribution of the intensity converges to the exact one as the volume of a cell tends to zero. 
-Thus, this fitting approach represents an alternative to the one through direct likelihood: instead of using only the points of the observed events and having to evaluate the integral over the observation region, we create artificial counts on a fine grid and use them to discover the intensity. 
+where $K$ is the overall number of cells and $g_i$ denotes a cell centroid. 
