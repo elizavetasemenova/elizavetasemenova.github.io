@@ -52,6 +52,6 @@ y_{i} \mid \lambda(c_i) \sim \text{Pois}(\lambda(c_i)),
 \lambda(c_i) \approx \frac{\vert D \vert}{K} \lambda(g_i).
 \end{equation}
 where $K$ is the overall number of cells and $g_i$ denotes a cell centroid. I.e. the observed counts follow the Poisson distribution, conditioned on the random field. Further we show that the higher the number of cells, the closer is the discretized representation of the LGCP to its true continuous version. By independence of the counts within disjoint cells we compute
-\begin{equation}
+$$
 \prod\limits_{i=1}^{K}  \frac{\exp(\lambda(c_i)) (\lambda(c_i))^{y_i}}{{y_i}!} 
-\end{equation}
+$$
