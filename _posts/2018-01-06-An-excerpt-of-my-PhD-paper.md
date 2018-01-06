@@ -187,3 +187,32 @@ This approach requires computation and storage of the Cholesky factors $U$ and $
 
 Based on equality (\*) there are two ways to perform the sampling from the array-normal distribution. First approach is to address the left hand side of the equality. It was taken by (Fernandes (1968)): originating from the field of stochastic automata, the algorithm computes left vector-matrix product, where the matrix is a Kronecker product of smaller matrices. The second approach is to execute  computations as expressed on the right hand side of (25). Such algorithm was presented in (Saatchi (2012)). Theoretical complexity of the two algorithms is identical, while real computation times may vary, depending on the software of implementation, due to the usage of such features as vectorization. 
 We tested two identical programs,  formalized in the probabilistic programming language Stan (Carpenter et al. (2016)), which only differ in the part of sampling the values of the Gaussian Process and compare average run-times per chain.
+
+## Incomplete grid
+Although all formulas were laid out in rectangular array form, not all entries of the computed mean are meaningful due to the shape of the study region. This issue is know as the \textit{incomplete grid}. Corrections can be made to account for irregular shapes by treating the points outside the border as latent.
+
+## Spacetime model formulation
+For spatial processes without time dependence, the modeling framework is formulated as follows:
+\begin{equation}
+\log(\lambda(s))= \textbf{X}^T(s) \boldsymbol{\beta} + f(s)
+\end{equation}
+with discretization 
+\begin{equation}
+\log(\lambda_{i,j})= \textbf{X}^T_{ij} \boldsymbol{\beta} + f_{ij}
+\end{equation}
+computed as described above. Important is that at no point objects larger than the target $n_y \times n_x$ matrix are being computed. 
+
+In the same spirit, this modeling framework can be extended to time-dependent processes. Binning available data by time intervals, we replicate the spatial grid to its spatio-temporal counterpart. To account for temporal variation, we include spatiotemporal covariates $X(s,t)$, temporal trend $T(t)$ and seasonality $s(t)$:
+\begin{equation}
+\log(\lambda(s,t))= \textbf{X}^T(s,t) \boldsymbol{\beta} + f(s,t) + T(t).
+\end{equation}
+The covariance function of the spatiotemporal process $f(s,t)$ is assumed to be of the separable form
+\begin{equation}
+\cov(f(s,t),f(s',t'))=R^s(||s-s'||)R^t(||t-t'||),
+\end{equation}
+i.e. the dependence across space and time is multiplicative. Seasonality is modeled as a linear combination of harmonic functions. Trend is expressed as a yearly factor. Thus, the log-intensity for the fitting procedure is discretized as
+\begin{equation}
+\log(\lambda_{i,j,t}) = \sum_{k=1}^{K} X^k_{i,j,t} \beta_k + f_{i,j,t} + T_t.
+\end{equation}
+The spatio-temporal random effect $f(s,t)$ now should be evaluated over the three-dimensional grid, constituted by Cartesian product of spatial coordinates and time bins $x \times y \times t.$ We assume multiplicative structure of the covariance with respect to space and time. As before, our aim is to sample from $\text{MVN}(0, \Sigma), \Sigma= W \otimes V \otimes U$, bypassing the computation of covariance matrices larger than $n_y \times n_y$, $n_x \times n_x$, $n_t \times n_t.$ Here $U, V, W$ are in-between rows and columns covariance matrices respectively, and $W$ is their analog for the temporal axis represented by a $n_t \times n_t$ matrix. To draw a sample from the target distribution we need to compute $(L_W \otimes L_V \otimes L_V) z_{n_y n_x n_t}, \quad z_{n_y n_x n_t} \sim N(0, I_{n_y n_x n_t}).$ 
+
