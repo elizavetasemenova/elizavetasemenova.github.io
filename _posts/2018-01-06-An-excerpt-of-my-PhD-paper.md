@@ -175,7 +175,7 @@ is an $n_y \times n_x$ matrix of independent draws from the standard normal dist
 L_U z_{n_y, n_x} L_V^T = vec_{n_y,n_x}^{-1} ((L_V \otimes L_U) vec(z_{n_y,n_x})
 \end{equation}
 \begin{equation}
-\sim  vec_{n_y,n_x}^{-1}(\text{MVN}(0, L L^T)) = \text{MN}_{n_y,n_x}(0, U, V).
+\sim  vec_{n_y,n_x}^{-1}(\text{MVN}(0, L L^T)) = MN_{n_y,n_x}(0, U, V).
 \end{equation}
 Generalizing this fact for 3d, we obtain
 \begin{equation}
