@@ -37,9 +37,9 @@ S \mid \lambda(s) \sim \text{PP}(\lambda(s)).
 \end{equation}
 The likelihood and log-likelihood for point patterns in this case depend on the entire intensity surface and are expressed as
 \begin{equation}
-L_{\text{po}}(s_1,\dots,s_n, s_i \in D; \lambda(s)) &= \exp(-\lambda(D)) \prod\limits_{i=1}^{n}\lambda(s_i),
+L_{\text{po}}(s_1,\dots,s_n, s_i \in D; \lambda(s)) = \exp(-\lambda(D)) \prod\limits_{i=1}^{n}\lambda(s_i),
 \end{equation}
 \begin{equation}
-\log L_{\text{po}}(s_1,\dots,s_n, s_i \in D; \lambda(s)) &= -\lambda(D) + \sum\limits_{i=1}^{n}\log \lambda(s_i).
+\log L_{\text{po}}(s_1,\dots,s_n, s_i \in D; \lambda(s)) = -\lambda(D) + \sum\limits_{i=1}^{n}\log \lambda(s_i).
 \end{equation}
 As before, $\lambda(D)$ should be computed as an integral over the domain $D$.
