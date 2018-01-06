@@ -4,12 +4,11 @@ title: An excerpt of my PhD paper “Modeling Log-Gaussian Cox Processes on fine
 date: 2018-01-06
 comments: true
 ---
-Model.
 
+## Paper 1 - Model
 
-### Model
-## Log-Gaussian Cox Process
-We consider a random realization of a point process $S=\{s_1, \dots ,s_n\}$ - a \textit{point pattern} in a study region $D$. The aim of point patterns analysis is to discover the underlying process based on the generated events $S$. Both the number of events $n$ and their locations $S$ are random. Point processes are characterized by their first- and second- order properties. First-order properties, such as  \textit{intensity function}, measure the distribution of events in a study region. Second-order properties measure the tendency of events to appear clustered, independently, or regularly-spaced. The \textit{intensity function} $\lambda(s)$ represents the non-normalized location probability density and sums up to the expectation of the total number of points within the study region $D$: 
+### Log-Gaussian Cox Process
+We consider a random realization of a point process $S=\{s_1, \dots ,s_n\}$ - a *point pattern* in a study region $D$. The aim of point patterns analysis is to discover the underlying process based on the generated events $S$. Both the number of events $n$ and their locations $S$ are random. Point processes are characterized by their first- and second- order properties. First-order properties, such as *intensity function*, measure the distribution of events in a study region. Second-order properties measure the tendency of events to appear clustered, independently, or regularly-spaced. The *intensity function* $\lambda(s)$ represents the non-normalized location probability density and sums up to the expectation of the total number of points within the study region $D$: 
 \begin{equation}
 \text{E}[N(D)] = \lambda(D) = \int_D \lambda(s)ds,
 \end{equation}
