@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Applied Machine Learning Days 2018: proposal accepted!
+title: Applied Machine Learning Days 2018\: proposal accepted!
 date: 2018-01-08
 comments: true
 ---
