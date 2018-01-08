@@ -17,11 +17,11 @@ and felt obliged to celebrate:
 </p>
 Below is the disclosure of what we promised to deliver (direct copy-paste f our proposal). 
 
-*Workshop title:* Machine Learning for News: Theory, Applications and Visualisation in Python
+**Workshop title:** Machine Learning for News: Theory, Applications and Visualisation in Python
 
-*Duration:* full-day
+**Duration:** full-day
 
-*Workshop summary:* The increasing availability and throughput of information flowing through social media outlets or internet-based news poses challenges for both the users and journalists. Users need to navigate through different news sources and, ideally, fact-check the content. Journalists face the challenge of summarizing often complicated and extensive data sets, and verifying that what is reported is indeed factual, all in a timely manner.
+**Workshop summary:** The increasing availability and throughput of information flowing through social media outlets or internet-based news poses challenges for both the users and journalists. Users need to navigate through different news sources and, ideally, fact-check the content. Journalists face the challenge of summarizing often complicated and extensive data sets, and verifying that what is reported is indeed factual, all in a timely manner.
 
 In this workshop, we want to equip you with the tools that will help you to quickly make sense of large streams of text and voice information, to both be better at reporting it and to defend yourself against misinformation. The visualisation tools and machine learning techniques we show can also be used by anyone, and journalists in particular, to deliver a better content.
 
