@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accepted workshop proposal Applied Machine Learning Days 2018
+title: Accepted workshop proposal at Applied Machine Learning Days 2018
 date: 2018-01-08
 comments: true
 ---
