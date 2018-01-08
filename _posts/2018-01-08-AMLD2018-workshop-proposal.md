@@ -15,7 +15,7 @@ and felt obliged to celebrate:
 <p>
 <img src="/images/Tequila.jpg" width="20%">
 </p>
-Below is the disclosure of what we promised to deliver (direct copy-paste f our proposal). 
+Below is the disclosure of what we promised to deliver (direct copy-paste of the proposal). 
 
 **Workshop title:** Machine Learning for News: Theory, Applications and Visualisation in Python
 
