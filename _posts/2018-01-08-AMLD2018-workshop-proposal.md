@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Applied Machine Learning Days 2018\: proposal accepted!
+title: Accepted workshop proposal Applied Machine Learning Days 2018
 date: 2018-01-08
 comments: true
 ---
@@ -8,11 +8,13 @@ comments: true
 This post is a part of a series, as explained [here](https://elizavetasemenova.github.io/blog/2018/01/07/Teaching-a-workshop-on-DL-for-NLP).
 
 As I already wrote, our workshop proposal for Applied Machine Learning Days was accpeted. We were certainly very happy:
+<p>
 <img src="/images/AlexMariaLiza.jpg" width="20%">
-
+</p>
 and felt obliged to celebrate:
+<p>
 <img src="/images/Tequila.jpg" width="20%">
-
+</p>
 Below is the disclosure of what we promised to deliver (direct copy-paste f our proposal). 
 
 *Workshop title:* Machine Learning for News: Theory, Applications and Visualisation in Python
