@@ -14,6 +14,7 @@ Since the day when this information became public people are showering us with q
 
 https://github.com/elizavetasemenova/amld-2018
 
-It is highly probable that I will be creating blog post out of separate parts of the material and link them here (with no guarantee that the material will be presented at the workshop exactly in the form as posted).
+For more posts on this topic follow these links:
+[Waht we wrote in the proposal](https://elizavetasemenova.github.io/blog/2018/01/08/AMLD2018-workshop-proposal)
 
 Can't wait to see you in Lausanne in January!
