@@ -16,7 +16,7 @@ https://github.com/elizavetasemenova/amld-2018
 
 For more posts on this topic follow these links:
 <ul style="list-style-type:square">
-       <li> [What we wrote in the proposal](https://elizavetasemenova.github.io/blog/2018/01/08/AMLD2018-workshop-proposal)
+       <li> <a href="https://elizavetasemenova.github.io/blog/2018/01/08/AMLD2018-workshop-proposal">What we wrote in the proposal</a>
 </ul>
 
 Can't wait to see you in Lausanne in January!
