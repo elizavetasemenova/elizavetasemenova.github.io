@@ -9,7 +9,7 @@ This post is a part of a series, as explained [here](https://elizavetasemenova.g
 
 As I already wrote, our workshop proposal for Applied Machine Learning Days was accpeted. We were certainly very happy and felt obliged to celebrate:
 <p style="text-align:center;">
-<img src="/images/Tequila.jpg" width="20%" align="middle">
+<img src="/images/Tequila.jpg" width="50%" align="middle">
 </p>
 Below is the disclosure of what we promised to deliver (direct copy-paste of the proposal). 
 
