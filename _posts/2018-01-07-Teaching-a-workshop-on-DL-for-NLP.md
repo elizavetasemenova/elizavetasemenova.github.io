@@ -12,11 +12,12 @@ proposal for a workshop at Applied Machine Learning Days 2018 at EPFL. Surprise 
 
 Since the day when this information became public people are showering us with questions regarding prerequisites, an overall plan, content and whether the created material will be available for non-participants. As a response I have created a repository, where prior to the workshop I may post the overall plan and some teaser material and after the workshop a more extended version of the material. 
 
-The overall plan of the Deep Learning component is already there:
+The overall plan of the Deep Learning component is already in the 
 
-https://github.com/elizavetasemenova/amld-2018
+* [GitHub repository](https://github.com/elizavetasemenova/amld-2018).
 
 For more posts on this topic from my-self and co-creators of the workshop follow these links:
 * [What we wrote in the proposal](https://elizavetasemenova.github.io/blog/2018/01/08/AMLD2018-workshop-proposal)
+* [Setting up virtual environments](https://elizavetasemenova.github.io/blog/2018/01/18/Setting-up-virtual-environment)
 
 Can't wait to see you in Lausanne in January!
