@@ -6,7 +6,7 @@ comments: true
 ---
 Once and forever I would like to commemorate the relation between two parametrizations of the Negative Binomial distribution: the one, using size=n and prob = p (and used in R as the default version), against the one where explicitly known are the mean $\mu$ and and the overdispersion parameter $k$:
 \begin{equation}
-NB(y \mid k, \mu) = \binom{y + k -1}{y} \left(\{\mu}{\mu+k}\right)^y \left(\frac{k}{\mu+k}\right)^{k},
+NB(y \mid k, \mu) = \binom{y + k -1}{y} (\mu+k)^y \left(\frac{k}{\mu+k}\right)^{k},
 \end{equation}
 
 The relationship is as follows:
