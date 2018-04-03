@@ -4,15 +4,13 @@ title: Once and forever - Negative Binomial parametrizations
 date: 2018-04-03
 comments: true
 ---
-Once and forever I would like to commemorate the relation between two parametrizations of the Negative Binomial distribution: 
-for the probability mass function with support $x = 0,1,2,...$
-
+Once and forever I would like to commemorate the relation between two parametrizations of the Negative Binomial distribution: the one, using size=n and prob = p (and used in R as the default version), against the one where explicitly known are the mean $\mu$ and and the overdispersion parameter $k$:
 \begin{equation}
-NB(y \mid r, p) = \binom{y + r -1}{y} (1-p)^r p^y,
+NB(y \mid k, \mu) = \binom{y + k -1}{y} \left(\{\mu}{\mu+k}\right)^y \left(\frac{k}{\mu+k}\right)^{k},
 \end{equation}
 
-versus
-
+The relationship is as follows:
 \begin{equation}
-NB(y \mid \phi, \mu) = \binom{y + \phi -1}{y} \left(\{\mu}{\mu+\phi}\right)^y \left(\frac{\phi}{\mu+\phi}\right)^{\phi},
+n = \frac{\mu p}{1-p}, \quad \mu + \frac{\mu^2}{k} = \frac{n(1-p)}{p^2}.
 \end{equation}
+
