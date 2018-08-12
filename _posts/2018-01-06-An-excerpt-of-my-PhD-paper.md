@@ -4,6 +4,7 @@ title: An excerpt of my PhD paper “Modeling Log-Gaussian Cox Processes on fine
 date: 2018-01-06
 comments: true
 ---
+Because I think that it will all end up somewhere in the Appendix.
 
 This post contains the current write up of the modeling section for my working paper.
 
