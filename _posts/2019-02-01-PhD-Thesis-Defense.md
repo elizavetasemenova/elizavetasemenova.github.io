@@ -17,4 +17,4 @@ of them tentative) are as follows:
 - An outbreak detection algorithm for disease count time series with excess zeros on the example of malaria elimination data in Swaziland.
 
 I have very little understanding of how I am supposed to cover all those topics in only 20 minutes of the presentation. But there is 
-always time for questions both from the side of the examiners and general audience. Come to support and chellenge me. Count on some drinks after! 
+always time for questions both from the side of the examiners and general audience. Come to support and challenge me. Count on some strong drinks after! 
