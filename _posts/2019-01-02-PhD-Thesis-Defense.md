@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PhD Thesis defense
-date: 2019-02-01
+date: 2019-01-02
 comments: true
 ---
 If you ever spoke to me about work, most likely, I told you only about one project which I completed in the framework of my PhD. There are,
@@ -13,7 +13,7 @@ of them tentative) are as follows:
 2. Identifying hotspots on disease maps: methodology and application to malaria data.
 3. Delineating hotspots on the map of shistosomiasis prevalence in Togo.
 4. Restoring missing data in remote sensing imagery via scalable spatio-temporal kriging.
-5. Bayesian variable selection for marked point patterns.
+5. A comprehensive modelling framework for Bayesian analysis of marked point patterns.
 6. An outbreak detection algorithm for disease count time series with excess zeros on the example of malaria elimination data in Swaziland.
 
 I have very little understanding of how I am supposed to cover all those topics in only 20 minutes of the presentation. But there is 
