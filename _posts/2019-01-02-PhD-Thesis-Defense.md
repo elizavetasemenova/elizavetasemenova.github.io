@@ -13,6 +13,7 @@ about my work, achievements and pitfalls, feel invited to the Siwss TPH ~~on the
 3. Delineating hotspots on the map of shistosomiasis prevalence in Togo.
 4. Restoring missing data in remote sensing imagery data via scalable spatio-temporal kriging.
 5. A comprehensive modelling framework for Bayesian analysis of marked point patterns.
+
 ~~6. An outbreak detection algorithm for disease count time series with excess zeros.~~
 
 I have very little understanding of how I am supposed to cover all those topics in only 20 minutes of the presentation. But there is 
