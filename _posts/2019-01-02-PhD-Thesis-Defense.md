@@ -14,7 +14,7 @@ of them tentative) are as follows:
 3. Delineating hotspots on the map of shistosomiasis prevalence in Togo.
 4. Restoring missing data in remote sensing imagery via scalable spatio-temporal kriging.
 5. A comprehensive modelling framework for Bayesian analysis of marked point patterns.
-6. An outbreak detection algorithm for disease count time series with excess zeros on the example of malaria elimination data in Swaziland.
+6. An outbreak detection algorithm for disease count time series with excess zeros.
 
 I have very little understanding of how I am supposed to cover all those topics in only 20 minutes of the presentation. But there is 
 always time for questions both from the side of the examiners and general audience. Come to support and challenge me. Count on some strong drinks after!
