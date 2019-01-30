@@ -10,7 +10,7 @@ about my work, achievements and pitfalls, feel invited to the Siwss TPH on the 2
 of them tentative) are as follows:
 
 1. Modeling Log-Gaussian Cox Processes on fine spatio-temporal scale.
-2. Identifying hotspots on disease maps: methodology and application to malaria data.
+2. Wombling methodology to identify hotspots on gridded disease surfaces.
 3. Delineating hotspots on the map of shistosomiasis prevalence in Togo.
 4. Restoring missing data in remote sensing imagery via scalable spatio-temporal kriging.
 5. A comprehensive modelling framework for Bayesian analysis of marked point patterns.
