@@ -53,6 +53,7 @@ essential steps:
 
 ### R and Stan example
 <script src="https://gist.github.com/elizavetasemenova/554ace3073faadce156e98391e965d14.js"></script>
+<script src="https://gist.github.com/elizavetasemenova/74f269c59d3a193fd942e9cf50d0938e.js"></script>
 
 ### Python and PyMC3 examples
 
