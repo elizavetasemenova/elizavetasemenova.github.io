@@ -4,7 +4,7 @@ title: Ordered Logistic regression and Probabilistic Programming with examples i
 date: 2019-07-28
 comments: true
 ---
-In this post, we discuss probabilistic programming languages on the example of ordered logistic regression.
+In this post, we discuss probabilistic programming languages on the example of the ordered logistic regression.
 
 ### Probabilistic programming languages (PPLs)
 Bayesian machine learning (read 'Bayesian statistics', 'probabilistic modelling' or even 'Bayesian Deep Learning' if 
@@ -52,6 +52,7 @@ essential steps:
 * make predictions.
 
 ### R and Stan example
+<script src="https://gist.github.com/elizavetasemenova/554ace3073faadce156e98391e965d14.js"></script>
 
 ### Python and PyMC3 examples
 
